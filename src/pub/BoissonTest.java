@@ -13,10 +13,10 @@ public class BoissonTest {
 	
 	@BeforeEach
 	protected void setUp() {
-		megaDemon = new Boisson("Mega Demon",(float) 16);
+		megaDemon = new Boisson("Mega Demon",16.0f);
 		crazyTiger = new Boisson("Crazy Tiger");
-		maximator = new Boisson("Maximator",(float) -10);
-		muscatDeRivesaltes = new Boisson("MuscatDeRiveslates", (float) 102);
+		maximator = new Boisson("Maximator",-10.0f);
+		muscatDeRivesaltes = new Boisson("MuscatDeRiveslates",102.0f);
 	}
 	
 	
@@ -42,13 +42,13 @@ public class BoissonTest {
 	
 	@Test 
 	public void limitePrix() {
-		muscatDeRivesaltes.prix = (float)-5;
+		muscatDeRivesaltes.prix = -5.0f;
 		assertFalse(muscatDeRivesaltes.prix<0);
 	}
 	
 	@Test 
 	public void limiteVolume() {
-		muscatDeRivesaltes.volume = (float)-100;
+		muscatDeRivesaltes.volume = -100.0f;
 		assertFalse(muscatDeRivesaltes.volume<0);
 	}
 	
