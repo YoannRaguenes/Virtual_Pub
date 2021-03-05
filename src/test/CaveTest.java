@@ -1,9 +1,11 @@
-package pub;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import junit.framework.TestCase;
+import pub.Boisson;
+import pub.Cave;
 
 class CaveTest extends TestCase {
 	private Cave cave1;

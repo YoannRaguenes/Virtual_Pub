@@ -1,9 +1,11 @@
-package pub;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import pub.Boisson;
 
 public class BoissonTest {
 	private Boisson megaDemon;
