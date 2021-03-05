@@ -1,0 +1,77 @@
+﻿Resource,Date,Description
+Bar.java,null,Make boissonAlcoolisee a static final constant or non-public and provide accessors if needed.
+Bar.java,null,Make boissonChaude a static final constant or non-public and provide accessors if needed.
+Bar.java,null,Make boissonFroide a static final constant or non-public and provide accessors if needed.
+Bar.java,null,Make cocktailAvecAlcoole a static final constant or non-public and provide accessors if needed.
+Bar.java,null,Make cocktailSansAlcoole a static final constant or non-public and provide accessors if needed.
+Bar.java,null,"Replace the type specification in this constructor call with the diamond operator (""<>"")."
+Bar.java,null,"Replace the type specification in this constructor call with the diamond operator (""<>"")."
+Bar.java,null,"Replace the type specification in this constructor call with the diamond operator (""<>"")."
+Bar.java,null,"Replace the type specification in this constructor call with the diamond operator (""<>"")."
+Bar.java,null,"Replace the type specification in this constructor call with the diamond operator (""<>"")."
+Bar.java,null,Use a StringBuilder instead.
+Bar.java,null,Use a StringBuilder instead.
+Bar.java,null,Use a StringBuilder instead.
+Bar.java,null,Use a StringBuilder instead.
+Bar.java,null,Use a StringBuilder instead.
+Bar.java,null,Use the primitive boolean expression here.
+Bar.java,null,Use the primitive boolean expression here.
+Bar.java,null,"A ""NullPointerException"" could be thrown; ""retourC"" is nullable here. [+1 flow]"
+Bar.java,null,Either remove or fill this block of code.
+Bar.java,null,Either remove or fill this block of code.
+Bar.java,null,Either remove or fill this block of code.
+Bar.java,null,Either remove or fill this block of code.
+Bar.java,null,Either remove or fill this block of code.
+Bar.java,null,Provide the parametrized type for this generic.
+Bar.java,null,Provide the parametrized type for this generic.
+Bar.java,null,"Remove this ""String"" constructor"
+Bar.java,null,"Replace the synchronized class ""Vector"" by an unsynchronized one such as ""ArrayList"" or ""LinkedList""."
+Bar.java,null,"Replace the synchronized class ""Vector"" by an unsynchronized one such as ""ArrayList"" or ""LinkedList""."
+Bar.java,null,"Replace the synchronized class ""Vector"" by an unsynchronized one such as ""ArrayList"" or ""LinkedList""."
+Bar.java,null,"Replace the synchronized class ""Vector"" by an unsynchronized one such as ""ArrayList"" or ""LinkedList""."
+Bar.java,null,"Replace the synchronized class ""Vector"" by an unsynchronized one such as ""ArrayList"" or ""LinkedList""."
+Boisson.java,null,Make alcoolise a static final constant or non-public and provide accessors if needed.
+Boisson.java,null,Make degre a static final constant or non-public and provide accessors if needed.
+Boisson.java,null,Make nom a static final constant or non-public and provide accessors if needed.
+Boisson.java,null,Make prix a static final constant or non-public and provide accessors if needed.
+Boisson.java,null,Make volume a static final constant or non-public and provide accessors if needed.
+Boisson.java,null,"Remove this use of ""Boolean""; it is deprecated."
+Boisson.java,null,"Remove this use of ""Boolean""; it is deprecated."
+Boisson.java,null,Use the primitive boolean expression here.
+Boisson.java,null,"Remove this ""Boolean"" constructor"
+Boisson.java,null,"Remove this ""Boolean"" constructor"
+Cave.java,null,Make rayons a static final constant or non-public and provide accessors if needed.
+Cave.java,null,"Replace the type specification in this constructor call with the diamond operator (""<>"")."
+Cave.java,null,Use a StringBuilder instead.
+Cave.java,null,Either remove or fill this block of code.
+Cave.java,null,Provide the parametrized type for this generic.
+Cave.java,null,Provide the parametrized type for this generic.
+Cave.java,null,"Remove this ""String"" constructor"
+Cave.java,null,"Replace the synchronized class ""Vector"" by an unsynchronized one such as ""ArrayList"" or ""LinkedList""."
+Cocktail.java,null,Make alcoolise a static final constant or non-public and provide accessors if needed.
+Cocktail.java,null,Make ingrediant a static final constant or non-public and provide accessors if needed.
+Cocktail.java,null,Make ingrediants a static final constant or non-public and provide accessors if needed.
+Cocktail.java,null,Make nom a static final constant or non-public and provide accessors if needed.
+Cocktail.java,null,Make quantite a static final constant or non-public and provide accessors if needed.
+Cocktail.java,null,"Replace the type specification in this constructor call with the diamond operator (""<>"")."
+Cocktail.java,null,Use a StringBuilder instead.
+Cocktail.java,null,Provide the parametrized type for this generic.
+Cocktail.java,null,"Remove this ""String"" constructor"
+Cocktail.java,null,"Rename field ""ingrediant"""
+Cocktail.java,null,"Replace the synchronized class ""Vector"" by an unsynchronized one such as ""ArrayList"" or ""LinkedList""."
+Pub.java,null,Make bar a static final constant or non-public and provide accessors if needed.
+Pub.java,null,Make cave a static final constant or non-public and provide accessors if needed.
+Pub.java,null,"Remove this use of ""Double""; it is deprecated."
+Pub.java,null,"Remove this use of ""Double""; it is deprecated."
+Pub.java,null,"Remove this use of ""Float""; it is deprecated."
+Pub.java,null,"Remove this use of ""Float""; it is deprecated."
+Pub.java,null,"Remove this ""Double"" constructor"
+Pub.java,null,"Remove this ""Double"" constructor"
+Pub.java,null,"Remove this ""Float"" constructor"
+Pub.java,null,"Remove this ""Float"" constructor"
+Pub.java,null,Replace this use of System.out or System.err by a logger.
+Pub.java,null,Replace this use of System.out or System.err by a logger.
+Pub.java,null,Replace this use of System.out or System.err by a logger.
+Pub.java,null,Replace this use of System.out or System.err by a logger.
+Pub.java,null,Replace this use of System.out or System.err by a logger.
+Pub.java,null,Replace this use of System.out or System.err by a logger.
