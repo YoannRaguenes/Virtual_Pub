@@ -2,12 +2,10 @@ package pub;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import junit.framework.TestCase;
 
-class BoissonTest extends TestCase {
+public class BoissonTest {
 	private Boisson megaDemon;
 	private Boisson crazyTiger;
 	private Boisson maximator;
@@ -15,11 +13,10 @@ class BoissonTest extends TestCase {
 	
 	@BeforeEach
 	protected void setUp() {
-	megaDemon = new Boisson("Mega Demon",(float) 16);
-	crazyTiger = new Boisson("Crazy Tiger");
-	maximator = new Boisson("Maximator",(float) -10);
-	muscatDeRivesaltes = new Boisson("MuscatDeRiveslates", (float) 102);
-	
+		megaDemon = new Boisson("Mega Demon",(float) 16);
+		crazyTiger = new Boisson("Crazy Tiger");
+		maximator = new Boisson("Maximator",(float) -10);
+		muscatDeRivesaltes = new Boisson("MuscatDeRiveslates", (float) 102);
 	}
 	
 	
@@ -35,12 +32,24 @@ class BoissonTest extends TestCase {
 	
 	@Test
 	public void limiteBoisson() {
-		assertFalse(maximator.degre>0);
+		assertFalse(maximator.degre<0);
 	}
 	
 	@Test 
 	public void limiteBoisson2() {
-		assertFalse(muscatDeRivesaltes.degre<100);
+		assertFalse(muscatDeRivesaltes.degre>100);
+	}
+	
+	@Test 
+	public void limitePrix() {
+		muscatDeRivesaltes.prix = (float)-5;
+		assertFalse(muscatDeRivesaltes.prix<0);
+	}
+	
+	@Test 
+	public void limiteVolume() {
+		muscatDeRivesaltes.volume = (float)-100;
+		assertFalse(muscatDeRivesaltes.volume<0);
 	}
 	
 	@Test
