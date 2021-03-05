@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>BarTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">test (5 mars 2021 11:34:49)</a> &gt; <a href="../../index.html" class="el_group">Virtual_Pub</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">test</a> &gt; <span class="el_source">BarTest.java</span></div><h1>BarTest.java</h1><pre class="source lang-java linenums">package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import pub.Bar;
+import pub.Boisson;
+import pub.Cocktail;
+
+<span class="fc" id="L12">class BarTest {</span>
+
+	private Bar bar;
+	private Boisson boissonAlcoolisee;
+	private Boisson boissonNonAlcoolisee;
+	private Boisson boissonChaude;
+	private Cocktail cocktailAlcoolise;
+	private Cocktail cocktailNonAlcoolise;
+	
+	@BeforeEach
+	void setUp() throws Exception {
+<span class="fc" id="L23">		bar = new Bar();</span>
+		
+<span class="fc" id="L25">		boissonAlcoolisee = new Boisson(&quot;bièrre&quot;);</span>
+<span class="fc" id="L26">		boissonAlcoolisee.alcoolise = true;</span>
+		
+<span class="fc" id="L28">		boissonNonAlcoolisee = new Boisson(&quot;jus d'orange&quot;);</span>
+<span class="fc" id="L29">		boissonNonAlcoolisee.alcoolise = false;</span>
+		
+<span class="fc" id="L31">		boissonChaude = new Boisson(&quot;thé menthe&quot;);</span>
+<span class="fc" id="L32">		boissonChaude.alcoolise = false;</span>
+		
+<span class="fc" id="L34">		cocktailAlcoolise = new Cocktail(&quot;Mojito&quot;);</span>
+<span class="fc" id="L35">		cocktailAlcoolise.alcoolise = true;</span>
+		
+<span class="fc" id="L37">		cocktailNonAlcoolise = new Cocktail(&quot;lait fraise&quot;);</span>
+<span class="fc" id="L38">		cocktailNonAlcoolise.alcoolise = false;</span>
+		
+<span class="fc" id="L40">	}</span>
+
+	@Test
+	void testBar() {
+<span class="fc" id="L44">		assertNotNull(bar);</span>
+<span class="fc" id="L45">	}</span>
+
+	@Test
+	void addBoissonAlcoolise() {
+<span class="fc" id="L49">		bar.add(boissonAlcoolisee);</span>
+<span class="fc" id="L50">		assertFalse(bar.boissonAlcoolisee.isEmpty());</span>
+<span class="fc" id="L51">		assertTrue(bar.boissonFroide.isEmpty());</span>
+<span class="fc" id="L52">	}</span>
+	
+	@Test
+	void addBoissonNonAlcoolise() {
+<span class="fc" id="L56">		bar.add(boissonNonAlcoolisee);</span>
+<span class="fc" id="L57">		assertTrue(bar.boissonAlcoolisee.isEmpty());</span>
+<span class="fc" id="L58">		assertFalse(bar.boissonFroide.isEmpty());</span>
+<span class="fc" id="L59">	}</span>
+
+	@Test
+	void addCocktailAlcoolise() {
+<span class="fc" id="L63">		bar.add(cocktailAlcoolise);</span>
+<span class="nc" id="L64">		assertFalse(bar.cocktailAvecAlcoole.isEmpty());</span>
+<span class="nc" id="L65">		assertTrue(bar.cocktailSansAlcoole.isEmpty());</span>
+<span class="nc" id="L66">	}</span>
+	
+	@Test
+	void addCocktailNonAlcoolise() {
+<span class="fc" id="L70">		bar.add(cocktailNonAlcoolise);</span>
+<span class="nc" id="L71">		assertTrue(bar.cocktailAvecAlcoole.isEmpty());</span>
+<span class="nc" id="L72">		assertFalse(bar.cocktailSansAlcoole.isEmpty());</span>
+<span class="nc" id="L73">	}</span>
+
+	@Test
+	void testServBoissonFroide() {
+<span class="fc" id="L77">		bar.add(boissonNonAlcoolisee); //une boisson non alcoolise est une boisson froide</span>
+<span class="fc" id="L78">		assertEquals(bar.serv(&quot;jus d'orange&quot;),boissonNonAlcoolisee);</span>
+<span class="fc" id="L79">	}</span>
+	
+	@Test
+	void testServBoissonAlcoolisee() {
+<span class="fc" id="L83">		bar.add(boissonAlcoolisee);</span>
+<span class="nc" id="L84">		assertEquals(bar.serv(&quot;bièrre&quot;),boissonAlcoolisee);</span>
+<span class="nc" id="L85">	}</span>
+
+	@Test
+	void testServBoissonChaude() {
+<span class="fc" id="L89">		bar.add(boissonChaude);</span>
+<span class="fc" id="L90">		assertEquals(bar.serv(&quot;thé menthe&quot;),boissonChaude);</span>
+<span class="fc" id="L91">	}</span>
+	
+	@Test
+	void testServCocktailNonAlcoolise() {
+<span class="fc" id="L95">		bar.add(cocktailNonAlcoolise);</span>
+<span class="nc" id="L96">		assertEquals(bar.serv(&quot;lait fraise&quot;),cocktailNonAlcoolise);</span>
+<span class="nc" id="L97">	}</span>
+	
+	@Test
+	void testServCocktailAlcoolise() {
+<span class="fc" id="L101">		bar.add(cocktailAlcoolise);</span>
+<span class="nc" id="L102">		assertEquals(bar.serv(&quot;mojito&quot;),cocktailAlcoolise);</span>
+<span class="nc" id="L103">	}</span>
+	
+	@Test
+	void testLimiteServ() {
+<span class="nc" id="L107">		assertEquals(bar.serv(&quot;lait fraise&quot;),cocktailNonAlcoolise);</span>
+<span class="nc" id="L108">	}</span>
+
+	@Test
+	void testToString() {
+<span class="fc" id="L112">		assertNotNull(bar.toString());</span>
+<span class="fc" id="L113">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span>test (5 mars 2021 11:34:49)</div></body></html>
